@@ -20,7 +20,7 @@ function ${safe_name}_menu() {
     'page callback' => 'drupal_get_form',
     'page arguments' => array('${safe_name}_admin_form'),
     'title' => '${real_name} Form',
-    'access arguments' => array('administer ${real_name}',
+    'access arguments' => array('administer ${real_name}'),
     'file' => '${safe_name}.admin.inc',
   );
 
@@ -28,7 +28,7 @@ function ${safe_name}_menu() {
     'page callback' => 'drupal_get_form',
     'page arguments' => array('${safe_name}_admin_form'),
     'title' => '${real_name} Form',
-    'access arguments' => array('administer ${real_name}',
+    'access arguments' => array('administer ${real_name}'),
     'file' => '${safe_name}.admin.inc',
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => 10,
