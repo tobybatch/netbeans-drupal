@@ -1,0 +1,12 @@
+name = ${real_name}
+; description =
+configure = admin/config/${safe_name}/${safe_name}
+package = ${safe_name}
+
+core = 7.x
+
+php = 5.6
+
+; version =
+; dependencies[] =
+; files[] =

@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file
+ * ${real_name} functions
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function ${safe_name}_menu() {
+  $items = array();
+
+  $items['${safe_name}'] = array(
+    'title' => '${real_name}',
+    'page callback' => array('${safe_name}_form'),
+    'access arguments' => array('access content'),
+  );
+
+  $items['admin/config/package/${safe_name}'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('${safe_name}_admin_form'),
+    'title' => '${real_name} Form',
+    'access callback' => 'administer ${real_name}',
+    'file' => '${safe_name}.admin.inc',
+  );
+
+  $items['admin/config/package/${safe_name}/${safe_name}'] = array(
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('${safe_name}_admin_form'),
+    'title' => '${real_name} Form',
+    'access callback' => 'administer ${real_name}',
+    'file' => '${safe_name}.admin.inc',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => 10,
+  );
+
+  return $items;
+}
+
+
+/**
+ * Implements hook_menu().
+ */
+function ${safe_name}_permission() {
+  return array(
+    'administer ${real_name}' => array(
+      'title' => t('Administer ${real_name}'),
+      'description' => t('Perform administration tasks for ${real_name}.'),
+    ),
+  );
+}
+
+/**
+ * Default action for ${real_name}
+ */
+function ${safe_name}_page() {
+  return '${real_name} place holder text.';
+}

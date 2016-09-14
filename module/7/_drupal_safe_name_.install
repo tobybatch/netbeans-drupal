@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * ${real_name} install functions
+ */
+
+/**
+ * Implements hook_install().
+ */
+function ${safe_name}_install() {
+}
