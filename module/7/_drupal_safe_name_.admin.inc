@@ -30,7 +30,10 @@ function ${safe_name}_admin_form_validate($form, &$form_state) {
 function ${safe_name}_admin_form_submit($form, &$form_state) {
   form_state_values_clean($form_state);
   $values = $form_state['values'];
-  variable_set('${safe_name}', $values);
+
+  foreach ($values as $key => $val) {
+    variable_set($key, $val);
+  }
 
   $params = array(':names' => implode(', ', array_keys($values)));
   $msg = t('Saved settings: :names', $params);
