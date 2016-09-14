@@ -28,7 +28,7 @@ function ${safe_name}_admin_form_validate($form, &$form_state) {
  * Implements hook_form_submit().
  */
 function ${safe_name}_admin_form_submit($form, &$form_state) {
-  form_state_values_clean(&$form_state);
+  form_state_values_clean($form_state);
   $values = $form_state['values'];
   variable_set(${safe_name}, $values);
 
